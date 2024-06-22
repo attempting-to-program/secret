@@ -1,0 +1,44 @@
+
+/**
+ * @name Hidden panels
+ * @originalAuthor Sharp-urAPIse#8888
+ * @version 1.0.0
+ * @description Hide all panels (member list, channel list, server list,...) except the chat panel. Hover at the edge of a panel to expand them; added extra thingy magigies (hololive justice reference)
+ * @authorId 343601966871609356
+ * @source https://github.com/tachibanayui/hidden-panel
+ * @website https://github.com/tachibanayui
+*/
+
+div[class^="sidebar_a4d4d9"] {
+    overflow: hidden;
+    flex-basis: 40px;
+    transition: flex-basis 0.05s ease-out;
+}
+div[class^="sidebar_a4d4d9"]:hover{
+    flex-basis: 250px;
+}
+
+/* settings hell */
+
+.sidebarRegion_c25c6d {
+    display: flex;
+    flex: 0 0 auto;
+    width: 240px;
+}
+div[class^="sidebarRegion_c25c6d"] {
+    overflow: hidden !important;
+    flex-basis: 15px !important;
+    transition: flex-basis 0.05s ease-out !important;
+}
+div[class^="sidebarRegion_c25c6d"]:hover{
+    flex-basis: 30% !important;
+}
+.contentRegionShownSidebar_c25c6d {
+    justify-content: center;
+}
+
+/* idk what this does but whatever lol :3 */
+
+section[class^="title"]:hover {
+    height: 40px !important;
+}
