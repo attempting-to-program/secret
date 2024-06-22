@@ -11,11 +11,13 @@
 
 div[class^="sidebar_a4d4d9"] {
     overflow: hidden;
-    flex-basis: 40px;
-    transition: flex-basis 0.05s ease-out;
+    flex-basis: 15px;
+    transition: flex-basis .25s .5s steps(10, end) !important;
 }
 div[class^="sidebar_a4d4d9"]:hover{
     flex-basis: 250px;
+    transition: flex-basis 0.1s steps(10, end) !important;
+    display: flex;
 }
 
 /* settings hell */
@@ -28,10 +30,12 @@ div[class^="sidebar_a4d4d9"]:hover{
 div[class^="sidebarRegion_c25c6d"] {
     overflow: hidden !important;
     flex-basis: 15px !important;
-    transition: flex-basis 0.05s ease-out !important;
+    transition: flex-basis .25s .5s steps(10, end) !important;
 }
 div[class^="sidebarRegion_c25c6d"]:hover{
-    flex-basis: 30% !important;
+    overflow: hidden !important;
+    flex-basis: 250px !important;
+    transition: flex-basis 0.05s steps(20, end) !important;
 }
 .contentRegionShownSidebar_c25c6d {
     justify-content: center;
