@@ -9,13 +9,31 @@
  * @website https://github.com/tachibanayui
 */
 
-div[class^="sidebar_a4d4d9"] {
+/* force hidden panels if the window's width is less than 850px */
+
+@media screen and (min-width: 900px) {
+    div[class^="membersWrap_cbd271 hiddenMembers_cbd271"],
+    div[class^="sidebar_a4d4d9"],
+    div[class^="container_cbd271"] {
+        overflow: hidden;
+        flex-basis: 240px !important;
+    }  
+}
+.hiddenMembers_cbd271 {
+    justify-content: normal;
+}
+div[class^="membersWrap_cbd271 hiddenMembers_cbd271"],
+div[class^="sidebar_a4d4d9"],
+div[class^="container_cbd271"] {
     overflow: hidden;
     flex-basis: 15px;
     transition: flex-basis .25s .5s steps(10, end) !important;
+    min-width: 0px !important;
 }
-div[class^="sidebar_a4d4d9"]:hover{
-    flex-basis: 250px;
+div[class^="membersWrap_cbd271 hiddenMembers_cbd271"]:hover,
+div[class^="sidebar_a4d4d9"]:hover,
+div[class^="container_cbd271"]:hover {
+    flex-basis: 240px;
     transition: flex-basis 0.1s steps(10, end) !important;
     display: flex;
 }
@@ -39,10 +57,4 @@ div[class^="sidebarRegion_c25c6d"]:hover{
 }
 .contentRegionShownSidebar_c25c6d {
     justify-content: center;
-}
-
-/* idk what this does but whatever lol :3 */
-
-section[class^="title"]:hover {
-    height: 40px !important;
 }
